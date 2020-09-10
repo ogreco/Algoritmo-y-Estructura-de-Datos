@@ -1,3 +1,22 @@
+/*El dueño de una cadena de negocios de artículos deportivos desea controlar sus ventas por medio 
+de una computadora, por lo cual registra la información de los monto de ventas, 
+en una matriz de orden M x N como la siguiente:
+					deportes
+				1	2	3 	n
+		 	1	50	40	20
+sucursales  2
+			3		90
+			m
+			
+Se pide:
+
+Cargar el arreglo mediante una función sin tipo.
+Número de la sucursal con mayor venta.
+Deporte con mayor venta.
+Venta total de todas las sucursales, calculado a través de una función con tipo.
+*/			
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -22,7 +41,7 @@ main(){
 	int sucursal = sucursal_mayor_venta(negocio, m, n);
 	printf("\nla sucursal con mayor venta es: %d", sucursal);
 	int deporte = deporte_mayor_venta(negocio, m, n);
-	printf("\nla sucursal con mayor venta es: %d", deporte);
+	printf("\nel deporte con mayor venta es: %d", deporte);
 	
 	for(int i=0; i<m; i++){
 		printf("\nla sucursal %d vendio: %f", i, total_venta_sucursal(negocio, n, i));
@@ -63,6 +82,15 @@ int sucursal_mayor_venta(float matriz[100][100], int filas, int columnas){
 			sucursal = i;	
 		}
 	}
+	
+	/*
+						deportes
+				1	2	3 	n
+		 	1	50	40	20
+sucursales  2	0	0	0
+			3	11	90	30
+			m	20	40	20
+	*/
 	
 	return sucursal;
 }
