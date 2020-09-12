@@ -1,0 +1,193 @@
+ Dfd (c)
+1
+1
+5
+0
+0
+4
+1
+30
+'ingrese la cantidad de filas'
+5
+1
+1
+m
+4
+1
+33
+'ingrese la cantidad de columnas'
+5
+1
+1
+n
+12
+1
+5
+carga
+1
+10
+matriz,m,n
+4
+1
+42
+'ingrese la fila para cambiar el elemento'
+5
+1
+1
+f
+4
+1
+45
+'ingrese la columna para cambiar el elemento'
+5
+1
+1
+c
+12
+1
+6
+cambio
+1
+12
+matriz, f, c
+4
+1
+31
+'ingrese la fila que desea ver'
+5
+1
+1
+f
+12
+1
+13
+elementosFila
+1
+12
+matriz, f, n
+4
+1
+34
+'ingrese la columna que desea ver'
+5
+1
+1
+c
+12
+1
+16
+elementosColumna
+1
+12
+matriz, c, n
+1
+2
+1
+5
+carga
+1
+12
+matriz, m, n
+0
+8
+1
+1
+i
+1
+1
+0
+1
+3
+m-1
+1
+1
+1
+8
+1
+1
+j
+1
+1
+0
+1
+3
+n-1
+1
+1
+1
+5
+1
+12
+matriz(i, j)
+10
+10
+3
+2
+1
+6
+cambio
+1
+12
+matriz, f, c
+0
+6
+1
+16
+matriz(f-1, c-1)
+1
+0
+3
+2
+1
+13
+elementosFila
+1
+12
+matriz, f, n
+0
+8
+1
+1
+j
+1
+1
+0
+1
+3
+n-1
+1
+1
+1
+4
+1
+14
+matriz(f-1, j)
+10
+3
+2
+1
+16
+elementosColumna
+1
+12
+matriz, c, m
+0
+8
+1
+1
+i
+1
+1
+0
+1
+3
+m-1
+1
+1
+1
+4
+1
+14
+matriz(i, c-1)
+10
+3

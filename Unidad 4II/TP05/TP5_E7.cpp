@@ -18,8 +18,7 @@ void carga(float matriz[10][10][10], int filas, int columnas, int pais);
 void muestra(float matriz[10][10][10], int filas, int columnas,  int pais);
 int pais_mayor_venta(float matriz[10][10][10], int filas, int columnas, int pais);
 float total_sucursal(float matriz[10][10][10], int nrosuc, int columnas, int nropais);
-/*int deporte_mayor_venta(float matriz[10][10][10], int filas, int columnas);
-float total_venta_sucursal(float matriz[10][10][10], int columnas, int sucursal);*/
+
 
 main(){
 	
