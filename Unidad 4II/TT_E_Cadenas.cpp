@@ -14,7 +14,7 @@ Mostrar el vector ordenado.
 typedef char cadena[60];
 void muestra(cadena v[], int n);
 void ordenar(cadena v[], int n);
-int contarVocales(cadena v[], int n);
+//int contarVocales(cadena v[], int n);
 
 main(){
 	int n;
@@ -29,7 +29,7 @@ main(){
 	}
 	ordenar(v, n);
 	muestra(v, n);
-	printf("la cantidad de palabras que inician con vocal es de %d", contarVocales(v, n));
+	//printf("la cantidad de palabras que inician con vocal es de %d", contarVocales(v, n));
 }
 
 void muestra(cadena v[], int n){
@@ -51,7 +51,7 @@ void ordenar(cadena v[], int n){
 		}			
 	}
 }
-
+/*
 int contarVocales(cadena v[], int n){
 	int c = 0;
 	char primeraLetra;
@@ -63,4 +63,4 @@ int contarVocales(cadena v[], int n){
 	}
 	
 	return c;
-}
+}*/
