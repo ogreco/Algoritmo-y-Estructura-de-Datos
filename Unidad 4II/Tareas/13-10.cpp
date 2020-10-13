@@ -1,5 +1,5 @@
 /*modificar el codigo para que permita la carga sin limetes de elementos en el vector y sin borrar lo ya cargado*/
-[20:13] Pedro Alejandro Cruz
+
     
 #include <stdio.h>
 #include <stdlib.h>
@@ -13,7 +13,7 @@ float precio;
 int stock;
 char marca[30];
 };
-void cargar(registro prod[50]);
+void cargar(registro prod[50], int &cantidad);
 void ordenar(int n, registro prod[50]);
 void mostrar(int n, registro prod[50]);
 void buscar(int n, registro prod[50]);
@@ -21,7 +21,7 @@ int menuPrincipal();
 int n;
 main()
 {
-int nOp;
+int nOp, cantidad = 0;
 registro producto[50];
  do
 {
@@ -29,10 +29,10 @@ nOp = menuPrincipal(); //Llama la función que muestra el menú.
 switch(nOp)
 {
 case 1:
-cargar(producto);
+cargar(producto, cantidad);
 break;
 case 2:
-mostrar(n,producto);
+mostrar(cantidad,producto);
 break;
 case 3:
 buscar(n,producto);
@@ -88,31 +88,24 @@ printf(" Seleccione la Opcion: ");
 scanf("%d", &opc);
 return opc; //retorna el número de opción seleccionada.
 }
-void cargar(registro prod[50])
+void cargar(registro prod[50], int &cantidad)
 {
-system("cls");
-int i,aux;
-printf("\nIngrese el codigo del producto: ");
-scanf("%d",&aux);
-i=0;
-while(aux!=0)
-{
-prod[i].codigo=aux;
-_flushall();
-printf("\nDescripcion: ");
-gets(prod[i].descripcion);
-printf("\nPrecio: ");
-scanf("%f",&prod[i].precio);
-printf("\nCantidad: ");
-scanf("%d",&prod[i].stock);
-_flushall();
-printf("\nMarca: ");
-gets(prod[i].marca);
-i++;
-printf("\nIngrese el codigo del producto: ");
-scanf("%d",&aux);
-}
-n=i;
+	system("cls");
+	int aux;
+	printf("\nIngrese el codigo del producto: ");
+	scanf("%d",&aux);	
+	prod[cantidad].codigo=aux;
+	_flushall();
+	printf("\nDescripcion: ");
+	gets(prod[cantidad].descripcion);
+	printf("\nPrecio: ");
+	scanf("%f",&prod[cantidad].precio);
+	printf("\nCantidad: ");
+	scanf("%d",&prod[cantidad].stock);
+	_flushall();
+	printf("\nMarca: ");
+	gets(prod[cantidad].marca);
+	cantidad++;
 }
 void ordenar(int n, registro prod[50])
 {
@@ -135,21 +128,46 @@ bandera=true;
 }
 while(bandera==true);
 }
+
+
+
+
+
+
+
+
+
+
+
 void mostrar(int n, registro prod[50])
 {
-int i;
-system("cls");
-for(i=0;i<n;i++)
-{
-printf("\nCodigo del producto: %d",prod[i].codigo);
-printf("\nDescripcion: %s",prod[i].descripcion);
-printf("\nPrecio: %.2f",prod[i].precio);
-printf("\nStock: %d",prod[i].stock);
-printf("\nMarca: %s",prod[i].marca);
-printf("\n\n");
-}
+	int i;
+	system("cls");
+	for(i=0;i<n;i++)
+	{
+		printf("\nCodigo del producto: %d",prod[i].codigo);
+		printf("\nDescripcion: %s",prod[i].descripcion);
+		printf("\nPrecio: %.2f",prod[i].precio);
+		printf("\nStock: %d",prod[i].stock);
+		printf("\nMarca: %s",prod[i].marca);
+		printf("\n\n");
+	}
 system("pause");
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 void buscar(int n, registro prod[100])
 {
 int i,bandera=0,bus;
