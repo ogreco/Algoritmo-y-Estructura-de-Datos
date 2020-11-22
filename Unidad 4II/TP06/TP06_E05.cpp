@@ -60,7 +60,7 @@ main(){
 					_flushall();
 					cadena apellido;
 					gets(apellido);
-					printf("ese apellido esta %d veces.", busqueda(apellidos, n, apellido));
+					printf("ese apellido esta %d veces.\n", busqueda(apellidos, n, apellido));
 					system("pause");
 		}
 		
@@ -124,6 +124,8 @@ void ordenDecreciente(cadena apellidos[], cadena nombres[], int n){
 			}	
 		}	
 	}
+	
+	printf("datos ordenados\n");
 }
 
 void ordenCreciente(cadena apellidos[], int n){

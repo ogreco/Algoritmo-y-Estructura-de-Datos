@@ -8,7 +8,7 @@ struct reg{
 };
 
 main(){
-	FILE *arch = fopen("archivo.dat", "w+b");
+	FILE *arch = fopen("archivo.dat", "a+b");
 	reg r;
 	int c = 0;
 	srand(time(NULL));

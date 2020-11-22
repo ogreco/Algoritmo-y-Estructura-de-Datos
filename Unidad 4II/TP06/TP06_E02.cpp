@@ -21,8 +21,6 @@ main(){
 	printf("\ningrese una lista de nombres separados por , (coma)");
 	_flushall();
 	gets(nombres);
-	/*nombres[40] = '\0';
-	puts(nombres);*/
 	
 	mostrarPalabras(nombres);
 	printf("\nla cantidad de caracateres de la cadena es %d", longitud(nombres));
@@ -30,12 +28,12 @@ main(){
 
 void mostrarPalabras(cadena nombres){
 	for(int i=0; i<strlen(nombres); i++){
-		if (nombres[i] == ',') printf("\n");
-		else printf("%c", nombres[i]);
+		if (nombres[i] != ' ')
+			if (nombres[i] != ',')
+				printf("%c", nombres[i]);
+			else
+				printf("\n");
 	}
-	/*Juan
-	 Pedro
-	  Angela, Beatriz, Jose, Luis, Angel,*/
 }
 
 int longitud(cadena nombres){
