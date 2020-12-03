@@ -1,0 +1,5 @@
+damian;galleguillo;isi;10.000000
+julian;juarez;mecanica;9.000000
+jorge;galleguillo;Electronica;10.000000
+rojos;virginia;isi;9.000000
+jose;perez;Mecatronica;8.000000
