@@ -22,9 +22,7 @@ struct Veterinario{
 struct Turno{
 	Fecha fecha;
 	char atenciom[340];
-	int dniDuenio;
 	Mascota mascota;
-	int matricula;
 	Veterinario veterinario;
 };
 
@@ -39,6 +37,14 @@ main(){
 	FILE *veterinarios = fopen("veterinarios.dat", "a+b");
 	FILE *turnos = fopen("turnos.dat", "a+b");
 	int opc;
+	
+	/*Veterinario v;
+	strcpy(v.apellidonombre, "Jose Perez");
+	v.matricula = 42424;
+	fwrite(&v, sizeof(v), 1, veterinarios);
+	fclose(veterinarios);
+	return 0;*/
+	
 	
 	do{
 		system("cls");
@@ -127,17 +133,11 @@ Veterinario buscarVeterinario(FILE *veterinarios, int matricula){
 
 void listarTurnos(FILE *turnos){
 	Turno turno;
-	Mascota m;
-	Veterinario v;
 	rewind(turnos);
 	fread(&turno, sizeof(turno), 1, turnos);
-	while(!feof(turnos)){
-		v = buscarVeterinario(veterinarios, turno.matricula);
-		printf("\nVeterinario: %s, Matricula: %d", v.apellidonombre, v.matricula);
-		m = buscarMascota(mascotas, turno.dniDuenio);
-		printf("\nMascota: %s, Dni Dueño: %d", m.apellidonombre, m.dniDuenio);
-		//printf("\nVeterinario: %s, Matricula: %d", turno.veterinario.apellidonombre, turno.veterinario.matricula);
-		//printf("\nMascota: %s, Dni Dueño: %d", turno.mascota.apellidonombre, turno.mascota.dniDuenio);
+	while(!feof(turnos)){		
+		printf("\nVeterinario: %s, Matricula: %d", turno.veterinario.apellidonombre, turno.veterinario.matricula);
+		printf("\nMascota: %s, Dni Dueño: %d", turno.mascota.apellidonombre, turno.mascota.dniDuenio);
 		printf("\nFecha Turno: %d/%d/%d", turno.fecha.dia, turno.fecha.mes, turno.fecha.anio);
 		printf("\n");
 		fread(&turno, sizeof(turno), 1, turnos);
